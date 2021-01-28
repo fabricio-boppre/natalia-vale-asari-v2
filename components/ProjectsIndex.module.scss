@@ -1,0 +1,72 @@
+/* ---------------------------------------------
+	MIXINS, VARIABLES & EXTENDS
+  ---------------------------------------------- */
+
+@use '../styles/assets';
+
+/* ---------------------------------------------
+	PROJECTS INDEX:
+  ---------------------------------------------- */
+
+#projects_index {
+	ul {
+		@include assets.flexbox();
+		@include assets.flex-wrap(wrap);
+		@include assets.justify-content(center);
+		@include assets.align-items(flex-start);
+		margin: 0 -30px; // Opening space for the margin that will keep the projects separated (see the "li" margin bellow), but aligned within the outer limits of their parent space (this "ul").
+		li {
+			@include assets.flex-basis(330px);
+			@include assets.box-shadow(1px 1px 2px gray);
+			margin: 0 30px 30px 30px;
+			background-color: white;
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+			img {
+				max-width: 100%;
+				display: block;
+				margin: 0 auto;
+			}
+			div.text {
+				padding: 15px;
+				text-align: center;
+				h3 {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	// Responsiveness rules for the projects_index:
+  @media only screen and (max-width: assets.$medium-body-max-width) {
+		ul {
+			margin: 0;
+			li {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}	
+	}
+
+}
+
+/* -------------------------------------------------
+	Fallbacks for browsers incompatible with flexbox:
+  -------------------------------------------------- */
+
+:global(.no-flexbox) { // Wrapped in a :global clause because I don't it to be changed by CSS Modules.
+  #projects_index {
+    ul {
+			margin: 0;
+			display: block;
+			li {
+				display: block;
+				max-width: 330px;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}

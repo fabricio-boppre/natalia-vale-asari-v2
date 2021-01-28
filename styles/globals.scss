@@ -1,0 +1,415 @@
+/* ---------------------------------------------
+	MIXINS, VARIABLES & EXTENDS
+  ---------------------------------------------- */
+
+@use 'assets';
+
+/* ---------------------------------------------
+	BASIC LAYOUT & GLOBAL DEFINITIONS:
+  ---------------------------------------------- */
+
+html,
+body {
+  background-color: assets.$pale-blue-color;
+
+  // Responsiveness rules for the html/body:
+  @media only screen and (max-width: assets.$page-wrap-max-width) {
+    background-color: assets.$page-wrap-background-color;
+  }
+}
+
+#page-wrap {
+  max-width: assets.$page-wrap-max-width;
+  min-width: 320px;
+  margin: 40px auto 40px;
+  background-color: assets.$page-wrap-background-color;
+  @include assets.box-shadow(1px 1px 2px gray);
+  @include assets.flexbox();
+  @include assets.align-items(stretch);
+
+  // Typography:
+  // | Basic:
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: assets.$basic-font-color;
+  // | Text elements:
+  p,
+  ul,
+  ol,
+  span {
+    font-size: 1.2rem;
+    line-height: 26px;
+    font-weight: 300;
+  }
+  // | Titles:
+  h1 {
+    font-size: 3rem;
+    line-height: 46px;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 2.2rem;
+    line-height: 38px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 1.6rem;
+    line-height: 32px;
+  }
+
+  #sidebar {
+    @include assets.flex(0 0 assets.$sidebar-width);
+    order: 1;
+    background-color: assets.$sidebar-background-color;
+    color: assets.$sidebar-font-color;
+    
+    #sidebar_text {
+      padding: 20px 15px;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      #nav_list {
+        ul {
+          font-weight: 600;
+          li:not(:last-child) {
+             padding-bottom: 10px;  
+          }
+        }
+      }
+      
+      hr {
+        margin: 20px 0;
+        border: 1px solid assets.$sidebar-font-color;
+      }
+      
+      #contact {
+        .title {
+          font-weight: 600;
+        }
+        p:not(:last-child) {
+          padding-bottom: 5px;  
+        }
+      }
+
+    }
+    
+    &.off {
+      display: none;
+    }
+  }
+
+  #main {
+    @include assets.flex(1);
+    order: 2;
+    padding: 0 40px;
+
+    &.off {
+      display: none;
+    }
+
+    header {
+      min-height: assets.$sidebar-image-height; // So they (header & sidebar-image) have the same height, while the text is shorter.
+      border-bottom: 1px solid assets.$basic-font-color;
+      padding: 20px 0;
+      @include assets.flexbox();
+      @include assets.flex-direction(column);
+      @include assets.justify-content(center);
+      @include assets.box-sizing(border-box);
+      
+      > p {
+        padding-top: 10px;
+      }
+      
+      // The message that, if JavaScript is disabled, asks the visitor to enable it (because it's necessary for the menu buttons):
+      #no-js-message {
+        font-size: 1.6rem;
+        line-height: 32px;
+        color: white;
+        background-color: red;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      #title_and_buttons {
+        @include assets.flexbox();
+        @include assets.align-items(flex-start);
+        @include assets.justify-content(space-between);
+
+        h1 {
+          order: 1;
+        }
+        
+        .header_button {
+          order: 2;
+          background-color: assets.$pale-blue-color;
+          padding: 5px 10px;
+          margin-left: 20px;
+          @include assets.border-radius(5px);
+          @include assets.flex-shrink(0);
+        }
+
+        #languages {
+          order: 2;
+          ul {
+            li {
+              display: inline;
+              
+              + li::before {
+                content: " | ";
+              }
+              
+              a {
+                text-decoration: none;
+                color: inherit;  
+
+                &.active {
+                  font-weight: 600;
+                }
+
+              }
+              
+            }
+          }
+        }
+
+        #show_menu {
+          display: none;
+          height: 40px; // 30px from the SVG plus 10px from the padding (.header_button).
+          width: 50px; // 30px from the SVG plus 20px from the padding (.header_button).
+          border: none;
+          cursor: pointer;
+
+          svg {
+            fill: assets.$basic-font-color;
+          }
+        }
+      }
+    }
+    
+    #content {
+      padding: 30px 0;
+
+      // Typography:
+      // | Text elements:
+      h2 {
+        margin-bottom: 30px;
+      }
+      p,
+      ul,
+      ol {
+        margin-bottom: 20px;
+      }
+
+    }
+  }
+  
+  #full-screen-menu {
+    @include assets.flex(1);
+    overflow: auto;
+    padding: 20px 20px 0 20px;
+    background-color: assets.$sidebar-background-color;
+    color: assets.$sidebar-font-color;
+
+    &.off {
+      display: none;
+    }
+
+    #buttons {
+      text-align: right;
+      
+      #close_menu {
+        height: 30px; // 30px from the SVG.
+        width: 30px; // 30px from the SVG.
+        padding: 0;
+        border: none;
+        cursor: pointer;
+        background-color: assets.$sidebar-background-color;
+
+        svg {
+          stroke: assets.$sidebar-font-color;
+        }
+      }
+    }
+    
+    #nav_list,
+    #lang_list,
+    #contact {
+      text-align: center;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul#lang_list {
+      padding-top: 10px;
+      
+      li {
+        display: inline;
+
+        + li::before {
+          content: " | ";
+          padding: 0 10px;
+        }
+
+        a {
+          &.active {
+            font-weight: 600;
+          }
+
+        }
+
+      }
+    }
+
+    #nav_list {
+      ul {
+        font-weight: 600;
+        li:not(:last-child) {
+           padding-bottom: 10px;  
+        }
+      }
+    }
+    
+    hr {
+      margin: 20px 0;
+    }
+    
+    #contact {
+      padding-bottom: 20px;
+      
+      .title {
+        font-weight: 600;
+      }
+      
+      p:not(:last-child) {
+        padding-bottom: 5px;  
+      }
+    }
+    
+  }
+
+  // Responsiveness rules for the page-wrap:
+  @media only screen and (max-width: assets.$page-wrap-max-width) {
+    margin: 0;
+    min-height: 100vh;
+    @include assets.box-shadow(none);
+  }
+
+  @media only screen and (max-width: assets.$medium-body-max-width) {
+
+    // Don't show the sidebar:
+    #sidebar {
+      display: none;
+    }
+
+    #main {
+      padding: 0 20px;
+
+      header {
+        #title_and_buttons {
+          
+          // Don't show the languages links:
+          #languages {
+            display: none;
+          }
+  
+          // Show the button menu:
+          #show_menu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------
+	Fallbacks for browsers incompatible with flexbox:
+  -------------------------------------------------- */
+
+.no-flexbox {
+  #page-wrap {
+    display: block;
+
+    #main {
+      display: block;
+      padding: 0 20px 20px 20px;
+
+      header {
+        min-height: auto;
+        
+        #title_and_buttons {
+          display: block;
+
+          h1 {
+          }
+
+          #languages {
+            display: block;
+            margin: 0 0 15px 0;
+            padding: 0;
+            background-color: inherit;
+          }
+  
+          // Don't show the button menu:
+          #show_menu {
+            display: none;
+          }
+        }
+      }
+    }
+
+    #sidebar {
+      display: block;
+      width: 100%;
+      
+      img {
+        display: none;
+        height: 0;
+      }
+
+      #sidebar_text {
+        padding: 20px;
+      }
+    }
+
+  }
+} 
+
+/* -----------------------------------------------------
+	Fallbacks for browsers incompatible with inline svg:
+  ------------------------------------------------------ */
+
+.no-inlinesvg {
+  #page-wrap {
+
+    #main {
+      padding: 0 20px;
+
+      header {
+        #title_and_buttons {
+          #show_menu {
+            background-image: url("/img/layout/icon_show_menu.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+          }
+        }
+      }
+    }
+
+    #full-screen-menu {
+      #buttons {
+        #close_menu {
+            background-image: url("/img/layout/icon_close_menu.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+      }
+    }
+  }
+}

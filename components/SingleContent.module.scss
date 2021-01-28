@@ -1,0 +1,74 @@
+/* ---------------------------------------------
+	MIXINS, VARIABLES & EXTENDS
+  ---------------------------------------------- */
+
+@use '../styles/assets';
+
+/* ---------------------------------------------
+	SINGLE CONTENT:
+  ---------------------------------------------- */
+
+#single_content {
+	h3 {
+		margin: 25px 0 25px 0;
+		font-weight: 600;
+	}
+	ul,
+	ol {
+	  list-style-position: inside;
+	  li {
+		  margin-bottom: 10px;
+	  }
+	}
+	ul {
+	  list-style-type: disc;
+	}
+	ol {
+		list-style-type: decimal;
+	}
+	a {
+		color: inherit;
+	}
+	em {
+		font-style: italic;
+	}
+	strong {
+		font-weight: 600;
+	}
+	p {
+		
+		// Default image & caption (aligned to the left):
+		img {
+			max-width: 100%;
+			height: auto;
+			
+			// Image captions:
+			+ em { 
+				display: block;
+				font-size: 1rem;
+				font-style: normal;
+			}
+			
+		}
+
+		// Center aligned image & caption (#center must be added after the image filename in the markdown file):
+		img[src*='#center'] { 
+		    display: block;
+		    margin: auto;
+
+				// Image captions:
+				+ em { 
+					text-align: center;
+				}
+		}
+	}
+}
+
+/* -------------------------------------------------
+	Fallbacks for browsers incompatible with flexbox:
+  -------------------------------------------------- */
+
+:global(.no-flexbox) { // Wrapped in a :global clause because I don't it to be changed by CSS Modules.
+  #single_content {
+  }
+}
