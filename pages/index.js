@@ -17,13 +17,13 @@ export default function Home({projectsData}) {
   }
 
   return (
-    <section>
+    <>
 
       <h2>{translations.Title}</h2>
       
       {content}
       
-    </section>  
+    </>  
   )
 }
 

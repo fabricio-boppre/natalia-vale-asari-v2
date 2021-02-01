@@ -58,9 +58,9 @@ export default class NataliaValeAsariWebsite extends App {
         
           <Header openFullScreenMenu={this.openFullScreenMenu} />
   
-          <div id="content">
+          <section id="content">
             <Component {...pageProps} />
-          </div>
+          </section>
                   
         </div>
 

@@ -7,16 +7,17 @@ export default function Project({projectData}) {
   const router = useRouter()
   const {locale} = router
   return (
-    <section>
+    <>
 
       <Head>
         <title>{projectData.title} | Dr Natalia Vale Asari</title>
       </Head>
       
-      <SingleContent projectTitle={projectData.title}
-                     projectContentHtml={projectData.contentHtml} />    
+      <h2>{projectData.title}</h2>
+      
+      <SingleContent ContentHtml={projectData.contentHtml} />    
     
-    </section>  
+    </>  
   )
 }
 
