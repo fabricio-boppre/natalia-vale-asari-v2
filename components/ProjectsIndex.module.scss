@@ -44,8 +44,16 @@
 		ul {
 			margin: 0;
 			li {
+				@include assets.flex-basis(250px);
+			}
+		}	
+	}
+  @media only screen and (max-width: assets.$small-body-max-width) {
+		ul {
+			li {
 				margin-left: 0;
 				margin-right: 0;
+				@include assets.flex-basis(330px);
 			}
 		}	
 	}
