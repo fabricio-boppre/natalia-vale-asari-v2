@@ -1,0 +1,77 @@
+/* ---------------------------------------------
+	MIXINS, VARIABLES & EXTENDS
+  ---------------------------------------------- */
+
+@use '../styles/assets';
+
+/* ---------------------------------------------
+	BLOG INDEX:
+  ---------------------------------------------- */
+
+#blog_index {
+	ul {
+		li {
+			@include assets.box-shadow(1px 1px 2px gray);
+			@include assets.flexbox();
+			@include assets.align-items(center);
+			background-color: white;
+			margin-bottom: 30px;
+			text-decoration: none;
+			color: inherit;
+
+			div.image {
+				@include assets.flex(1 0 35%);
+				img {
+					max-width: 100%;
+					display: block;
+				}
+			}
+
+			div.text {
+				@include assets.flex(1 0 65%);
+				padding: 15px;
+				box-sizing: border-box;
+				h3 {
+					padding-bottom: 10px;
+					a {
+						text-decoration: none;
+						color: inherit;
+					}
+				}
+			}
+		}
+	}
+
+	// Responsiveness rules for the blog_index:
+  @media only screen and (max-width: assets.$small-body-max-width) {
+		ul {
+			li {
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				max-width: 330px;
+				
+			}
+		}	
+	}
+
+}
+
+/* -------------------------------------------------
+	Fallbacks for browsers incompatible with flexbox:
+  -------------------------------------------------- */
+
+:global(.no-flexbox) { // Wrapped in a :global clause because I don't it to be changed by CSS Modules.
+  #blog_index {
+    ul {
+			margin: 0;
+			display: block;
+			li {
+				display: block;
+				max-width: 330px;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}

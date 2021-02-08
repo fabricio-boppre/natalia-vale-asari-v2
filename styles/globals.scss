@@ -202,6 +202,11 @@ body {
       ol {
         margin-bottom: 20px;
       }
+      // For spans (the info in a post page, for instance) outside the SingleContent component:
+      > span {
+        margin-bottom: 20px;
+        display: block;
+      }
 
     }
   }

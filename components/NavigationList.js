@@ -30,6 +30,11 @@ export default function NavigationList(props) {
 							  <li>
 							  	<a href="/">ORCID</a>
 							  </li>
+							  <li>
+							  	<Link href="/blog">
+								  <a>Blog</a>
+								</Link>
+							  </li>
 						  </ul>
 					</nav>
 }
