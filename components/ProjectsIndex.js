@@ -11,7 +11,7 @@ export default function ProjectsIndex(props) {
                   return <li key={id}>
                             <Link href={"/projects/" + id} >
                               <a>
-                                <img src={"/img/" + indexImage} alt={title} title={title} />
+                                <img src={"/img/content/" + indexImage} alt={title} title={title} />
                                 <div className={styles.text}>
                                   <h3>{title}</h3>
                                   {summary}
