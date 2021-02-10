@@ -4,6 +4,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import Image from 'next/image';
 import Router from 'next/router';
+import HeadRss from '../components/HeadRss.js';
 import Header from '../components/Header.js';
 import NavigationList from '../components/NavigationList.js';
 import LanguagesList from '../components/LanguagesList.js';
@@ -14,11 +15,10 @@ import '../styles/globals.css';
 // Custom App: https://nextjs.org/docs/advanced-features/custom-app
 // - The Component prop is the active page, so whenever you navigate between routes, Component will change to the new page. Therefore, any props you send to Component will be received by the page;
 // - pageProps is an object with the initial props that were preloaded for your page by one of our data fetching methods, otherwise it's an empty object.
-
 export default class NataliaValeAsariWebsite extends App {
 
 	// Initial State:
-  state = {fullScreenMenu: 'off'};
+  state = {fullScreenMenu: 'off'}
 
 	// Methods: 
 	// - Arrow functions make .bind method calls in the constructor unnecessary;
@@ -38,22 +38,21 @@ export default class NataliaValeAsariWebsite extends App {
     if (this.state.fullScreenMenu == 'on') {
       Router.events.on('routeChangeComplete', (this.closeFullScreenMenu));
     }
-    
+
     return (
 
       <main id="page-wrap">
-      
+
         <Head>
           <title>Dr Natalia Vale Asari</title>
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
-            rel="stylesheet"
-          />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" />
           <script src="/js/modernizr-custom.js"></script>
         </Head>
 
+        <HeadRss />
+        
         <div id="main" className={this.state.fullScreenMenu === 'off' ? 'on' : 'off'}>
         
           <Header openFullScreenMenu={this.openFullScreenMenu} />

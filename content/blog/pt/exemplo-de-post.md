@@ -1,6 +1,7 @@
 ---
 title: 'Exemplo de post'
 date: '2021-02-04'
+summary: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
 tags: 
 - 
   id: 'cinema'

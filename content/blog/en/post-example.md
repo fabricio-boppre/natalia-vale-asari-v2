@@ -1,6 +1,7 @@
 ---
 title: 'Post example'
 date: '2021-01-30'
+summary: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
 tags: 
 - 
   id: 'teaching'
