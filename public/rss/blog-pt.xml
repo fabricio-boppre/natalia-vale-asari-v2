@@ -1,17 +1,17 @@
 
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>Blog - RSS feed (pt)</title>
-      <link>http://natalia-vale-asari-v2.vercel.app/pt/blog</link>
+      <title>Dr Natalia Vale Asari - Blog (pt)</title>
+      <link>https://natalia-vale-asari-v2.vercel.app/pt/blog</link>
       <description>Astrofísica, ciência e imprecisões sinápticas.</description>
       <language>pt</language>
       <lastBuildDate>Thu, 04 Feb 2021 00:00:00 GMT</lastBuildDate>
-      <atom:link href="http://natalia-vale-asari-v2.vercel.app/rss/blog-pt.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="https://natalia-vale-asari-v2.vercel.app/rss/blog-pt.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-     <guid isPermaLink="true">http://natalia-vale-asari-v2.vercel.app/pt/blog/exemplo-de-post</guid>
+     <guid isPermaLink="true">https://natalia-vale-asari-v2.vercel.app/pt/blog/exemplo-de-post</guid>
      <title>Exemplo de post</title>
-     <link>http://natalia-vale-asari-v2.vercel.app/pt/blog/exemplo-de-post</link>
+     <link>https://natalia-vale-asari-v2.vercel.app/pt/blog/exemplo-de-post</link>
      <description>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</description>
      <pubDate>Thu, 04 Feb 2021 00:00:00 GMT</pubDate>
   </item>

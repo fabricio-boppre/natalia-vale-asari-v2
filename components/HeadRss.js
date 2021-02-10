@@ -9,7 +9,7 @@ export default function HeadRss(props) {
   const {locales} = router
   
   // Generate the RSS feed links recursively from the locales: 
-  const rssList = locales.reduce((list, locale) => list += `<link rel="alternate" type="application/rss+xml" title="Blog - RSS feed (${locale})" href="/rss/blog-${locale}.xml"/>`, '')
+  const rssList = locales.reduce((list, locale) => list += `<link rel="alternate" type="application/rss+xml" title="Dr Natalia Vale Asari - Blog (${locale})" href="https://natalia-vale-asari-v2.vercel.app/rss/blog-${locale}.xml"/>`, '')
   
   // Add the list do the head of the document:
   useEffect(() => {
