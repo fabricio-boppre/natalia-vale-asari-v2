@@ -1,0 +1,50 @@
+/* ---------------------------------------------
+	MIXINS, VARIABLES & EXTENDS
+  ---------------------------------------------- */
+
+@use '../styles/assets';
+
+/* ---------------------------------------------
+	BLOG INDEX:
+  ---------------------------------------------- */
+
+#blog_header {
+	@include assets.flexbox();
+	@include assets.justify-content(space-between);
+
+  :global(a.rss) {
+		width: 30px;
+		height: 30px; 
+    svg {
+			fill: assets.$basic-font-color;
+		}
+  }
+
+}
+
+/* -------------------------------------------------
+	Fallbacks for browsers incompatible with flexbox:
+  -------------------------------------------------- */
+
+:global(.no-flexbox) { // Wrapped in a :global clause because I don't it to be changed by CSS Modules.
+  #blog_header {
+		:global(a.rss) {
+			display: block;
+			padding-bottom: 30px;
+		}
+	}
+}
+
+/* -----------------------------------------------------
+	Fallbacks for browsers incompatible with inline svg:
+  ------------------------------------------------------ */
+
+:global(.no-inlinesvg) {
+  #blog_header {
+		:global(a.rss) {
+	    background-image: url("/img/layout/icon_rss.png");
+	    background-repeat: no-repeat;
+	    background-position: center center;
+		}
+  }
+}

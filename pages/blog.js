@@ -1,6 +1,7 @@
 import fs from 'fs'
 import {useRouter} from 'next/router'
 import {getSortedBlogData, generateBlogRss} from '../lib/blog'
+import BlogHeader from '../components/BlogHeader.js';
 import BlogIndex from '../components/BlogIndex.js';
 import * as translationsLibrary from "../lib/translationsLibrary.js"
 
@@ -21,7 +22,7 @@ export default function Blog({blogData}) {
   return (
     <>
 
-      <h2>{translations.Title}</h2>
+      <BlogHeader title={translations.Title} />
       
       {content}
       
