@@ -4,9 +4,6 @@ date: '2021-02-04'
 summary: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
 tags: 
 - 
-  id: 'cinema'
-  tag: 'cinema'
-- 
   id: 'ciencia'
   tag: 'ciência'
 indexImage: 2001-index.jpg

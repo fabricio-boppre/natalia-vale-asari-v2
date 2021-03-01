@@ -1,0 +1,73 @@
+/* ---------------------------------------------
+	MIXINS, VARIABLES & EXTENDS
+  ---------------------------------------------- */
+
+@use '../styles/assets';
+
+/* ---------------------------------------------
+	BLOG INDEX:
+  ---------------------------------------------- */
+
+#blog_pagination {
+	@include assets.flexbox();
+	@include assets.justify-content(center);
+
+	:global(#info),	
+	:global(#previous),
+	:global(#next) {
+		line-height: 40px;
+	}
+	
+	:global(#info) {
+		font-size: 1.2rem;
+	}
+	
+	:global(#previous),
+	:global(#next) {
+		@include assets.flex-basis(30%);
+		font-size: 2rem;
+		font-weight: bold;
+		text-align: center;
+		a {
+			text-decoration: none;
+			color: inherit;
+			// display: block;
+      background-color: assets.$pale-blue-color;
+      padding-left: 10px;
+      padding-right: 10px;
+      @include assets.border-radius(5px);
+
+		}
+	}
+
+	// Responsiveness rules for the blog_pagination:
+  @media only screen and (max-width: assets.$small-body-max-width) {
+	}
+
+}
+
+/* -------------------------------------------------
+	Fallbacks for browsers incompatible with flexbox:
+  -------------------------------------------------- */
+
+:global(.no-flexbox) { // Wrapped in a :global clause because I don't it to be changed by CSS Modules.
+  #blog_pagination {
+		max-width: 330px;
+		height: 40px;
+		
+		:global(#info) {
+			display: none;
+		}
+		:global(#previous),
+		:global(#next) {
+			
+		}
+		:global(#previous) {
+			float: left;
+		}
+		:global(#next) {
+			float: right;
+		}
+
+	}
+}
