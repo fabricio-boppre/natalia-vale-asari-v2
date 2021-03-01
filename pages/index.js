@@ -1,5 +1,5 @@
 import {useRouter} from 'next/router'
-import {getSortedProjectsData} from '../lib/projects'
+import {getProjectsData} from '../lib/projects'
 import ProjectsIndex from '../components/ProjectsIndex.js';
 import * as translationsLibrary from "../lib/translationsLibrary.js"
 
@@ -27,9 +27,9 @@ export default function Home({projectsData}) {
   )
 }
 
-// This function gets called at build time on server-side and fetches the projects data to be shown on the index using the library function getSortedProjectsData, which gets data from the file system:
+// This function gets called at build time on server-side and fetches the projects for this locale to be shown on the index using the library function getProjectsData, which gets data from the file system:
 export async function getStaticProps(context) {
-  const projectsData = getSortedProjectsData(context.locale)
+  const projectsData = getProjectsData(context.locale)
   return {
     props: {
       projectsData
