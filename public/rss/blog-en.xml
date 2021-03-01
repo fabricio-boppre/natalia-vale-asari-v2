@@ -1,0 +1,20 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Dr Natalia Vale Asari - Blog (en)</title>
+      <link>https://natalia-vale-asari-v2.vercel.app/en/blog</link>
+      <description>Astrophysics, science and ramblings.</description>
+      <language>en</language>
+      <lastBuildDate>Thu, 04 Feb 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://natalia-vale-asari-v2.vercel.app/rss/blog-en.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+     <guid isPermaLink="true">https://natalia-vale-asari-v2.vercel.app/en/blog/post-example</guid>
+     <title>Post example</title>
+     <link>https://natalia-vale-asari-v2.vercel.app/en/blog/post-example</link>
+     <description>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</description>
+     <pubDate>Thu, 04 Feb 2021 00:00:00 GMT</pubDate>
+  </item>
+
+    </channel>
+  </rss>
