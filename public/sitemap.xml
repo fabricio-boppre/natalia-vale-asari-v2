@@ -1,0 +1,38 @@
+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          
+                      <url>
+                          <loc>https://natalia-vale-asari-v2.vercel.app/en</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://natalia-vale-asari-v2.vercel.app/pt</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://natalia-vale-asari-v2.vercel.app/en/blog</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://natalia-vale-asari-v2.vercel.app/pt/blog</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://natalia-vale-asari-v2.vercel.app/en/blog/post-example</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://natalia-vale-asari-v2.vercel.app/pt/blog/exemplo-de-post</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://natalia-vale-asari-v2.vercel.app/en/projects/project-example</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://natalia-vale-asari-v2.vercel.app/pt/projects/exemplo-de-projeto</loc>
+                      </url>
+                  
+      </urlset>
+  

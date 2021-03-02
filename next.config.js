@@ -1,6 +1,5 @@
-// See the translation library in /lib/translationsLibrary.js
-
 module.exports = {
+  // Set up the languages:
   i18n: {
     locales: ['en', 'pt'],
     defaultLocale: 'en',
@@ -11,8 +10,10 @@ module.exports = {
       config.node = {
         fs: 'empty'
       }
+    } else {
+      // Create the sitemap on build:
+      require('./lib/siteMap')
     }
-
     return config
   },
   async redirects() {

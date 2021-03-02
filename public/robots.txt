@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://natalia-vale-asari-v2.vercel.app/sitemap.xml
