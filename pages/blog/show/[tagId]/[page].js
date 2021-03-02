@@ -1,6 +1,6 @@
 import fs from 'fs'
 import {useRouter} from 'next/router'
-import {getTagsAndLocalesAndPagesNumbers,getBlogData,generateBlogRss} from '../../../../lib/blog'
+import {getTagsAndLocalesAndPagesNumbers,getBlogData} from '../../../../lib/blog'
 import BlogHeader from '../../../../components/BlogHeader.js';
 import BlogIndex from '../../../../components/BlogIndex.js'
 import BlogPagination from '../../../../components/BlogPagination.js'
@@ -61,16 +61,6 @@ export async function getStaticPaths(context) {
 // This function gets called at build time on server-side and fetches the posts for this page, locale and tag, to be shown on the blog index using the library function getBlogData, which gets data from the file system:
 export async function getStaticProps(context) {
   const data = getBlogData(context.locale, context.params.tagId, context.params.page)
-
-  // Let's take the opportunity to generate the RSS feed file:
-  // - We use sortedBlogData, which is not paginated.
-  // - We do it only for the "all" tag build, because the RSS is for all the posts, disregarding the tags.
-  if (context.params.tagId == 'all') {
-    const translations = translationsLibrary[context.locale].blogIndex
-    const rss = generateBlogRss(data.sortedBlogData, translations.rssDescription, context.locale)
-    fs.writeFileSync('./public/rss/blog-'.concat(context.locale, '.xml'), rss)
-  }
-  
   return {
     props: {
       sortedBlogDataPerPage: data.sortedBlogDataPerPage,
