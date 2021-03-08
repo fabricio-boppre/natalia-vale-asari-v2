@@ -28,7 +28,7 @@ export default function NavigationList(props) {
 							  	<a href="http://minerva.ufsc.br/~natalia/phd_thesis/Natalia2010_thesis_finalversion.pdf">{translations.Thesis}</a>
 							  </li>
 							  <li>
-							  	<a href="/">ORCID</a>
+							  	<a href="https://orcid.org/0000-0003-0842-8688">ORCID</a>
 							  </li>
 							  <li>
 							  	<Link href="/blog/">
