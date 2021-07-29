@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import {useRouter} from 'next/router'
 import {getProjectsData} from '../lib/projects'
 import ProjectsIndex from '../components/ProjectsIndex.js';
@@ -18,6 +19,9 @@ export default function Home({projectsData}) {
 
   return (
     <>
+      <Head>
+        <title>Dr Natalia Vale Asari</title>
+      </Head>
 
       <h2>{translations.Title}</h2>
       

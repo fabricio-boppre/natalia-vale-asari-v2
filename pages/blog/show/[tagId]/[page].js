@@ -1,4 +1,5 @@
 import fs from 'fs'
+import Head from 'next/head'
 import {useRouter} from 'next/router'
 import {getTagsAndLocalesAndPagesNumbers,getBlogData} from '../../../../lib/blog'
 import BlogHeader from '../../../../components/BlogHeader.js';
@@ -35,6 +36,9 @@ export default function Blog({sortedBlogDataPerPage, indexTag, pagination, curre
 
   return (
     <>
+      <Head>
+        <title>Blog | Dr Natalia Vale Asari</title>
+      </Head>
       <BlogHeader title={title} />
       {content}
       {paginationLinks}

@@ -4,31 +4,15 @@ module.exports = {
     locales: ['en', 'pt'],
     defaultLocale: 'en',
   },
+	// webpack5: false,
   webpack: (config, { isServer }) => {
-    // Fixes npm packages that depend on `fs` module
     if (!isServer) {
-      config.node = {
-        fs: 'empty'
-      }
+    	// Fixes npm packages that depend on `fs` module:
+      config.resolve.fallback.fs = false;
     } else {
       // Create the sitemap on build:
       require('./lib/siteMap')
     }
-    return config
-  },
-  async redirects() {
-    return [
-      {
-        source: '/blog',
-        destination: '/blog/show/all/1',
-        permanent: true,
-      },
-      {
-        source: '/blog/show/:tagId',
-        destination: '/blog/show/:tagId/1',
-        permanent: true,
-      },
-
-    ]
+    return config;
   },
 }

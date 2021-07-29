@@ -6,7 +6,7 @@ export default function PostInfo(props) {
                {props.date}
                &nbsp;|&nbsp; 
                {props.tags.map(({ id, tag }) => {
-                 return <Link href={"/blog/show/" + id} key={id} >
+                 return <Link href={"/blog/show/" + id + "/1"} key={id} >
                           <a>{tag}</a>
                         </Link>
                  }).reduce((prev, curr) => [prev, ', ', curr])}

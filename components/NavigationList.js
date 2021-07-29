@@ -11,9 +11,9 @@ export default function NavigationList(props) {
 	return  <nav id="nav_list">
 						  <ul>
 							  <li>
-								<Link href="/">
-									<a>{translations.CurrentProjects}</a>
-								</Link>
+									<Link href="/">
+										<a>{translations.CurrentProjects}</a>
+									</Link>
 							  </li>
 							  <li>
 							  	<a href="http://minerva.ufsc.br/~natalia/teaching/">{translations.Teaching}</a>
@@ -31,9 +31,9 @@ export default function NavigationList(props) {
 							  	<a href="https://orcid.org/0000-0003-0842-8688">ORCID</a>
 							  </li>
 							  <li>
-							  	<Link href="/blog/">
-								  <a>Blog</a>
-								</Link>
+							  	<Link href="/blog/show/all/1">
+									  <a>Blog</a>
+									</Link>
 							  </li>
 						  </ul>
 					</nav>
