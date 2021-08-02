@@ -22,7 +22,7 @@ export default function ProjectsIndex(props) {
               
                 else if (click == 'none')
                     return <li key={id}>
-                              <img src={"/img/" + indexImage} alt={title} title={title} />
+                              <img src={"/img/content/" + indexImage} alt={title} title={title} />
                               <div className={styles.text}>
                                 <h3>{title}</h3>
                                 {summary}
@@ -33,7 +33,7 @@ export default function ProjectsIndex(props) {
                   return <li key={id}>
                             <Link href={click} >
                               <a>
-                                <img src={"/img/" + indexImage} alt={title} title={title} />
+                                <img src={"/img/content/" + indexImage} alt={title} title={title} />
                                 <div className={styles.text}>
                                   <h3>{title}</h3>
                                   {summary}
