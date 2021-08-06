@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://natalia-vale-asari-v2.vercel.app/sitemap.xml
+Sitemap: https://www.nataliavaleasari.net/sitemap.xml

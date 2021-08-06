@@ -2,15 +2,18 @@ import {useRouter} from 'next/router'
 import Head from 'next/head'
 import {getAllProjectIds, getProjectData} from '../../lib/projects'
 import SingleContent from '../../components/SingleContent.js';
+import * as translationsLibrary from "../../lib/translationsLibrary.js"
 
 export default function Project({projectData}) {
   const router = useRouter()
   const {locale} = router
+	const metaTitle = translationsLibrary[locale].header.Title	
+
   return (
     <>
 
       <Head>
-        <title>{projectData.title} | Dr Natalia Vale Asari</title>
+        <title>{projectData.title} | {metaTitle}</title>
       </Head>
       
       <h2>{projectData.title}</h2>

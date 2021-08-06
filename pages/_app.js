@@ -33,7 +33,7 @@ export default class NataliaValeAsariWebsite extends App {
   render() {
 
     const { Component, pageProps } = this.props;
-
+		
     // Closing the menu if it's open during a route change:
     if (this.state.fullScreenMenu == 'on') {
       Router.events.on('routeChangeComplete', (this.closeFullScreenMenu));

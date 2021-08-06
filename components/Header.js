@@ -22,7 +22,7 @@ export default function Header(props) {
                 <LanguagesList />
               </div>
   
-              <h1>Dr Natalia Vale Asari</h1>
+              <h1>{translations.Title}</h1>
     
               <button id="show_menu" 
                       className="header_button" 

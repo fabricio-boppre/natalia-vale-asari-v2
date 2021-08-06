@@ -12,6 +12,7 @@ export default function Blog({sortedBlogDataPerPage, indexTag, pagination, curre
   const {locale} = router
 	// Translations for the current language and the current set of string:
 	const translations = translationsLibrary[locale].blogIndex
+	const metaTitle = translationsLibrary[locale].header.Title	
   // Check if we are filtering the posts by tag (if so, then show the tag on the title):
   let title
   if (indexTag.tag == 'all') {
@@ -37,7 +38,7 @@ export default function Blog({sortedBlogDataPerPage, indexTag, pagination, curre
   return (
     <>
       <Head>
-        <title>Blog | Dr Natalia Vale Asari</title>
+        <title>Blog | {metaTitle}</title>
       </Head>
       <BlogHeader title={title} />
       {content}

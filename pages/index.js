@@ -9,6 +9,7 @@ export default function Home({projectsData}) {
   const {locale} = router
 	// Translations for the current language and the current set of string:
 	const translations = translationsLibrary[locale].projectsIndex
+	const metaTitle = translationsLibrary[locale].header.Title
   // Check if there are projects (if so, then show the projects index component) or if we should show a message of no projects:
   let content
   if (projectsData.length > 0) {
@@ -20,7 +21,7 @@ export default function Home({projectsData}) {
   return (
     <>
       <Head>
-        <title>Dr Natalia Vale Asari</title>
+        <title>{metaTitle}</title>
       </Head>
 
       <h2>{translations.Title}</h2>

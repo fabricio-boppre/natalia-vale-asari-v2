@@ -3,15 +3,18 @@ import Head from 'next/head'
 import {getAllPostIds, getPostData} from '../../lib/blog'
 import SingleContent from '../../components/SingleContent.js';
 import PostInfo from '../../components/PostInfo.js';
+import * as translationsLibrary from "../../lib/translationsLibrary.js"
 
 export default function Post({postData}) {
   const router = useRouter()
   const {locale} = router
+	const metaTitle = translationsLibrary[locale].header.Title	
+	
   return (
     <>
 
       <Head>
-        <title>{postData.title} | Dr Natalia Vale Asari</title>
+        <title>{postData.title} | {metaTitle}</title>
       </Head>
       
       <h2>{postData.title}</h2>

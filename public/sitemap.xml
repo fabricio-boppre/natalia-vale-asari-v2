@@ -2,35 +2,43 @@
 							      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 							          
 							                      <url>
-							                          <loc>https://natalia-vale-asari-v2.vercel.app/en</loc>
+							                          <loc>https://www.nataliavaleasari.net/en</loc>
 							                      </url>
 							                  
 							                      <url>
-							                          <loc>https://natalia-vale-asari-v2.vercel.app/pt</loc>
+							                          <loc>https://www.nataliavaleasari.net/pt</loc>
 							                      </url>
 							                  
 							                      <url>
-							                          <loc>https://natalia-vale-asari-v2.vercel.app/en/blog</loc>
+							                          <loc>https://www.nataliavaleasari.net/en/blog</loc>
 							                      </url>
 							                  
 							                      <url>
-							                          <loc>https://natalia-vale-asari-v2.vercel.app/pt/blog</loc>
+							                          <loc>https://www.nataliavaleasari.net/pt/blog</loc>
 							                      </url>
 							                  
 							                      <url>
-							                          <loc>https://natalia-vale-asari-v2.vercel.app/en/blog/post-example</loc>
+							                          <loc>https://www.nataliavaleasari.net/en/blog/tuimp</loc>
 							                      </url>
 							                  
 							                      <url>
-							                          <loc>https://natalia-vale-asari-v2.vercel.app/pt/blog/exemplo-de-post</loc>
+							                          <loc>https://www.nataliavaleasari.net/pt/blog/tuimp</loc>
 							                      </url>
 							                  
 							                      <url>
-							                          <loc>https://natalia-vale-asari-v2.vercel.app/en/projects/project-example</loc>
+							                          <loc>https://www.nataliavaleasari.net/en/projects/bond</loc>
 							                      </url>
 							                  
 							                      <url>
-							                          <loc>https://natalia-vale-asari-v2.vercel.app/pt/projects/exemplo-de-projeto</loc>
+							                          <loc>https://www.nataliavaleasari.net/en/projects/dig</loc>
+							                      </url>
+							                  
+							                      <url>
+							                          <loc>https://www.nataliavaleasari.net/pt/projects/bond</loc>
+							                      </url>
+							                  
+							                      <url>
+							                          <loc>https://www.nataliavaleasari.net/pt/projects/dig</loc>
 							                      </url>
 							                  
 							      </urlset>
