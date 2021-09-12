@@ -14,7 +14,7 @@ Natalia Vale Asari é astrônoma e professora universitária de física.
 
 Se você não possui nenhuma experiência com o Next.js, comece por [aqui](https://nextjs.org/docs/getting-started).
 
-Após clonar o projeto (`git clone git@bitbucket.org:fabricioboppre/natalia-vale-asari-v2.gi`), não esqueça de instalar suas dependências (`npm install`).
+Após clonar o projeto (`git clone git@bitbucket.org:fabricioboppre/natalia-vale-asari-v2.git`), não esqueça de instalar suas dependências (`npm install`).
 
 Para o deployment, recomendo a [Vercel](https://nextjs.org/docs/deployment).
 
@@ -38,6 +38,6 @@ Natalia Vale Asari is an astronomer and professor of Physics.
 
 If you have no experience with Next.js, start [here](https://nextjs.org/docs/getting-started).
 
-After cloning the project (`git clone git@bitbucket.org:fabricioboppre/natalia-vale-asari-v2.gi`), don't forget to install its dependencies (`npm install`).
+After cloning the project (`git clone git@bitbucket.org:fabricioboppre/natalia-vale-asari-v2.git`), don't forget to install its dependencies (`npm install`).
 
 For deployment, I suggest [Vercel](https://nextjs.org/docs/deployment).
