@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react';
-import Head from 'next/head';
+import React, {useEffect} from 'react'
+import Head from 'next/head'
 import {useRouter} from 'next/router'
 
-// This component adds the RSS feeds links to the head, as I was unable to do it directly in the next/head component:
+// This component adds the RSS feeds links to the head:
+// - We do this in a separate component because at _app.js we don't have access to the `router` object, which is convenient to generate our different feeds (one for each language);
 // - It uses the Effect Hook, which allow us to run some additional code after React has updated the DOM (https://reactjs.org/docs/hooks-effect.html).
 export default function HeadRss(props) {
   const router = useRouter()
@@ -13,7 +14,7 @@ export default function HeadRss(props) {
   
   // Add the list do the head of the document:
   useEffect(() => {
-    document.head.innerHTML += rssList;
+    document.head.innerHTML += rssList
   }, [])
   
   return null
