@@ -10,7 +10,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 # Content:
 
-Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) (c) 2021 Natalia Vale Asari
 
 ## You are free to:
 
