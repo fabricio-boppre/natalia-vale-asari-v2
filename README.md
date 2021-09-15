@@ -22,6 +22,10 @@ Para o deployment, recomendo a [Vercel](https://nextjs.org/docs/deployment).
 
 Os comentários ao longo do código-fonte estão em inglês. Se algum brasileiro interessado em aprender algo com seu código-fonte encontrar alguma dificuldade, é só entrar em [contato](mailto:fabricio.boppre@gmail.com).
 
+## Licenças
+
+O código-fonte deste site está compartilhado sob a licença MIT e seu conteúdo sob a licença CC BY-NC-SA 4.0. Para mais informações, leia o arquivo [LICENSES](LICENSES.md).
+
 # (In English)
 
 ## Introduction
@@ -41,3 +45,7 @@ If you have no experience with Next.js, start [here](https://nextjs.org/docs/get
 After cloning the project (`git clone git@bitbucket.org:fabricioboppre/natalia-vale-asari-v2.git`), don't forget to install its dependencies (`npm install`).
 
 For deployment, I suggest [Vercel](https://nextjs.org/docs/deployment).
+
+## Licenses
+
+The source code of this website is shared under the MIT license and the content is under the CC BY-NC-SA 4.0 license. For more information, see [LICENSES](LICENSES.md).
