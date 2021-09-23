@@ -2,7 +2,7 @@ import Link from 'next/link'
 import {useRouter} from 'next/router'
 import * as translationsLibrary from "../lib/translationsLibrary.js"
 
-export default function NavigationList(props) {
+export default function NavigationList() {
   const router = useRouter()
   const {locale} = router
 	// Translations for the current language and the current set of string:

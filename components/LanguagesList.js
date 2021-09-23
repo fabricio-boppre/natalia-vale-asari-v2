@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 
-export default function LanguagesList(props) {
+export default function LanguagesList() {
   const router = useRouter()
   const {locales, locale} = router
   const localesList = 

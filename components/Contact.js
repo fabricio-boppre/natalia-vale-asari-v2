@@ -1,7 +1,7 @@
 import {useRouter} from 'next/router'
 import * as translationsLibrary from "../lib/translationsLibrary.js"
 
-export default function Contact(props) {
+export default function Contact() {
   const router = useRouter()
   const {locale} = router
 	// Translations for the current language and the current set of string:

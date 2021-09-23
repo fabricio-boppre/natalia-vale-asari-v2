@@ -5,7 +5,7 @@ import {useRouter} from 'next/router'
 // This component adds the RSS feeds links to the head:
 // - We do this in a separate component because at _app.js we don't have access to the `router` object, which is convenient to generate our different feeds (one for each language);
 // - It uses the Effect Hook, which allow us to run some additional code after React has updated the DOM (https://reactjs.org/docs/hooks-effect.html).
-export default function HeadRss(props) {
+export default function HeadRss() {
   const router = useRouter()
   const {locales} = router
   
