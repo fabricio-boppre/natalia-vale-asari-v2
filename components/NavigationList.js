@@ -19,7 +19,7 @@ export default function NavigationList() {
 							  	<a href="http://minerva.ufsc.br/~natalia/teaching/">{translations.Teaching}</a>
 							  </li>
 							  <li>
-							  	<a href="https://ui.adsabs.harvard.edu/search/q=author%3A(%22vale%20asari%2C%20n.%22%20OR%20%22asari%2C%20n.%20v.%22)&sort=date%20desc%2C%20bibcode%20desc&p_=0">{translations.Publications}</a>
+							  	<a href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0003-0842-8688">{translations.Publications}</a>
 							  </li>
 							  <li>
 							  	<a href={translations.CvUrl}>{translations.CvName}</a>
