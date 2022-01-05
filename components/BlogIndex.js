@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import PostInfo from '../components/PostInfo.js';
 import styles from './BlogIndex.module.css'
