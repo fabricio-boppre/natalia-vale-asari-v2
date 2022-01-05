@@ -35,3 +35,11 @@ yarn-error.log*
 
 # Nova
 /.nova/
+
+# robots & sitemap
+/public/sitemap.xml
+/public/robots.txt
+
+# rss
+/public/rss/blog-en.xml
+/public/rss/blog-pt.xml
