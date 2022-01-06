@@ -1,0 +1,28 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Dr Natalia Vale Asari - Blog (en)</title>
+      <link>https://www.nataliavaleasari.net/en/blog</link>
+      <description>Astrophysics, science and ramblings.</description>
+      <language>en</language>
+      <lastBuildDate>Wed, 13 Oct 2021 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://www.nataliavaleasari.net/rss/blog-en.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+     <guid isPermaLink="true">https://www.nataliavaleasari.net/en/blog/science_outreach_20211</guid>
+     <title>Science outreach content created by Physics 1 students (2021-1)</title>
+     <link>https://www.nataliavaleasari.net/en/blog/science_outreach_20211</link>
+     <description>Videos, instagram carousels, etc. on classical mechanics.</description>
+     <pubDate>Wed, 13 Oct 2021 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+     <guid isPermaLink="true">https://www.nataliavaleasari.net/en/blog/tuimp</guid>
+     <title>The Universe In My Pocket (tuimp)</title>
+     <link>https://www.nataliavaleasari.net/en/blog/tuimp</link>
+     <description>Booklets about Astronomy in several languages.</description>
+     <pubDate>Wed, 04 Aug 2021 00:00:00 GMT</pubDate>
+  </item>
+
+    </channel>
+  </rss>
