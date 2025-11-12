@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Este é um pequeno [site estático](https://www.sanity.io/what-is-a-static-site) construído com o framework [Next.js](https://nextjs.org) e cujo conteúdo está armazenado em arquivos [Markdown](https://guides.github.com/features/mastering-markdown/).
+Este é um pequeno [site estático](https://www.sanity.io/what-is-a-static-site) construído com o framework [Next.js](https://nextjs.org) e cujo conteúdo está armazenado em arquivos [Markdown](https://guides.github.com/features/mastering-markdown/). 
 
 Você pode visitá-lo clicando [aqui](https://www.nataliavaleasari.net/). O site utiliza o modo de pré-renderização [Static Generation](https://nextjs.org/docs/basic-features/pages#static-generation-recommended).
 
